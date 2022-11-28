@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_alpha_70"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_300sdp"
+
+
+        android:gravity="center_horizontal"
+        android:background="@drawable/popup_toolbox"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/guide_activity_usage_stats_page_text2"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_color"
+
+                android:text="@string/applock_permission_guide_reminder"
+
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/text_color"
+
+                android:textSize="@dimen/_14sdp" />
+
+            <FrameLayout
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/na_guide_switch_btn"
+                    style="@style/swguide"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/na_guide_hand_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:padding="2dp"
+                    android:src="@drawable/pointing_hand" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/na_guide_ok"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:text="OK"
+            android:elevation="@dimen/_5sdp"
+            android:textColor="@color/white"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_gravity="fill_horizontal" />
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#417a7a7a">
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:background="@drawable/popup_toolbox"
+        android:layout_centerInParent="true"
+
+
+        >
+
+        <RelativeLayout
+            android:id="@+id/rel_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tools"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_20sdp" />
+
+            <ImageView
+                android:id="@+id/imv_close"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_close"
+
+                android:layout_marginRight="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_top"
+            android:layout_marginTop="24dp"
+            android:drawableLeft="@drawable/ic_camera_tools"
+            android:drawablePadding="16dp"
+            android:text="@string/screenshots"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sdp" />
+
+        <Switch
+            android:id="@+id/sw_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_top"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:checked="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_capture"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_record_tools"
+            android:drawablePadding="16dp"
+            android:text="@string/camera"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+        <Switch
+            android:id="@+id/sw_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_capture"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5sdp"
+
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_camera"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_brush"
+            android:drawablePadding="16dp"
+            android:text="@string/brush"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            />
+
+        <Switch
+            android:id="@+id/sw_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sw_camera"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5sdp"
+
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</RelativeLayout>

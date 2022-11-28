@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:src="@drawable/icon"
+            />
+        <TextView
+            android:id="@+id/tv_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:gravity="center"
+            android:textStyle="bold"
+           android:visibility="invisible"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/app_name"/>
+
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_18sdp"
+            android:gravity="center"
+            android:layout_below="@+id/tv_click"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Privacy Policy"/>
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_below="@+id/tv_privacy"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:text="This privacy policy describes all the \n information collected by Unitech Apps \n while using our product.This \n privacy policy explain how and why we\n use and collect that information"/>
+        <LinearLayout
+            android:id="@+id/ll_see"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:layout_below="@+id/tv_info">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+
+                android:text=".  "
+                android:textColor="#212121"
+                android:textSize="@dimen/_11sdp" />
+            <RelativeLayout
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_priff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:onClick="PrivacyRead"
+                    android:text=" See more"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_13sdp" />
+                <View
+                    android:layout_width="@dimen/_64sdp"
+                    android:layout_height="1dp"
+                    android:background="@color/text_color"
+                    android:layout_below="@+id/tv_priff"
+                    android:layout_marginLeft="2dp"></View>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_che"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_start"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_centerHorizontal="true">
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/checkbox"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                android:layout_marginLeft="@dimen/_10sdp"-->
+<!--                android:button="@drawable/btn_checkbox_selector" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:text="By continuing you accept our  "
+                android:textColor="#FF4081"
+                android:textSize="@dimen/_10sdp" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tv_pri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:onClick="PrivacyRead"
+                    android:textStyle="bold"
+                    android:text=" Privacy Policy"
+                    android:textColor="#FF4081"
+                    android:textSize="@dimen/_10sdp" />
+                <View
+                    android:layout_width="@dimen/_66sdp"
+                    android:layout_height="1dp"
+                    android:background="#ffffff"
+                    android:layout_below="@+id/tv_pri"
+                    android:layout_marginLeft="2dp"></View>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/btn_start"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_bg"
+            android:onClick="getAllowed"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+

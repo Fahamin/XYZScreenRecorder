@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_fbad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ad"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:padding="@dimen/_2sdp"
+            android:textSize="@dimen/_6sdp"
+            android:visibility="gone"
+            android:background="#FFC107"/>
+        <LinearLayout
+            android:background="@drawable/ad_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <com.facebook.ads.NativeAdLayout
+                      android:id="@+id/native_ad_container"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="@dimen/_2sdp"
+                      android:orientation="vertical"
+                      android:visibility="gone"/>
+
+                  <com.xyz.screen.recorder.adsMAnager.NativeAdSetupSmall
+                      android:id="@+id/nativeadd"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="bottom"/>
+
+
+              </RelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

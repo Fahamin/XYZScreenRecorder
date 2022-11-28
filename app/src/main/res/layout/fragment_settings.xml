@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#DAD6D6"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/screen_padding_10"
+                android:layout_marginTop="@dimen/screen_padding_10"
+                android:layout_marginEnd="@dimen/screen_padding_10"
+                android:layout_marginBottom="@dimen/screen_padding_5"
+                android:background="@drawable/bg_rounded"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tvTitleStyle"
+                        android:text="@string/prefs_category_video_settings_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_resolution"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:src="@drawable/ic_hd"
+                        android:tint="#39CF3F"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/sw_wave_mode"
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_resolution_title" />
+
+                        <TextView
+                            android:id="@+id/value_resolution"
+                            style="@style/rowdetails"
+                            android:text="1080P" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_bit_rate"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:src="@drawable/ic_hq"
+                        android:tint="#CC1252"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_bit_title" />
+
+                        <TextView
+                            android:id="@+id/value_bit_rate"
+                            style="@style/rowdetails"
+                            android:text="Auto" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_frams"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:src="@drawable/ic_frame"
+                        android:tint="#FFEB3B"/>
+
+                    <LinearLayout
+                        android:layout_width="231dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_fps_title" />
+
+                        <TextView
+                            android:id="@+id/value_frams"
+                            style="@style/rowdetails"
+                            android:text="40" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_orientation"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:src="@drawable/ic_lanscape"
+                        android:tint="#C045D5"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_orientation_title"
+                            />
+
+                        <TextView
+                            android:id="@+id/value_orientation"
+                            style="@style/rowdetails"
+                            android:text="Auto" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xyz.screen.recorder.adsMAnager.NativeAdSetupSmall
+                    android:id="@+id/nativeadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_gravity="bottom"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/screen_padding_10"
+                android:layout_marginTop="@dimen/screen_padding_10"
+                android:layout_marginEnd="@dimen/screen_padding_10"
+                android:layout_marginBottom="@dimen/screen_padding_5"
+                android:background="@drawable/bg_rounded"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tvTitleStyle"
+                        android:text="@string/prefs_category_audio_settings_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_audio"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#39CF3F"
+                        android:src="@drawable/ic_micro" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_audio_record_title" />
+
+                        <TextView
+                            android:id="@+id/value_audio"
+                            style="@style/rowdetails"
+                            android:text="None" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/screen_padding_10"
+                android:layout_marginTop="@dimen/screen_padding_10"
+                android:layout_marginEnd="@dimen/screen_padding_10"
+                android:layout_marginBottom="@dimen/screen_padding_5"
+                android:background="@drawable/bg_rounded"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tvTitleStyle"
+                        android:text="@string/prefs_category_save_options_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_location"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#39C2CF"
+                        android:src="@drawable/ic_folder" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_save_location_title" />
+
+                        <TextView
+                            android:id="@+id/value_location"
+                            style="@style/rowdetails"
+                            android:text="/storage/emulated/0" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_name_format"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#E91E63"
+                        android:src="@drawable/ic_fromat_name" />
+
+                    <LinearLayout
+                        android:layout_width="231dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+
+                            android:text="@string/preference_filename_format_title" />
+
+                        <TextView
+                            android:id="@+id/value_name_format"
+                            style="@style/rowdetails"
+                            android:text="recording_yyyyMMdd_hhmmss" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_name_prefix"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#4CAF50"
+                        android:src="@drawable/ic_file_name" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_filename_prefix_title" />
+
+                        <TextView
+                            android:id="@+id/value_name_prefix"
+                            style="@style/rowdetails"
+                            android:text="recording" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/screen_padding_10"
+                android:layout_marginTop="@dimen/screen_padding_10"
+                android:layout_marginEnd="@dimen/screen_padding_10"
+                android:layout_marginBottom="@dimen/screen_padding_5"
+                android:background="@drawable/bg_rounded"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/tvTitleStyle"
+                        android:text="@string/prefs_category_recording_settings_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_use_float_controls"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#9C27B0"
+                        android:src="@drawable/ic_touch" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_floating_control_title" />
+
+                        <TextView
+                            style="@style/rowdetails"
+                            android:text="@string/preference_floating_control_summary" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/cb_use_float_controls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_timer"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#CDDC39"
+                        android:src="@drawable/ic_count" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_timer_title" />
+
+                        <TextView
+                            android:id="@+id/value_timer"
+                            style="@style/rowdetails"
+                            android:text="5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/checkbox_size"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding"
+                        android:rotationY="@integer/locale_mirror_flip"
+                        android:src="@drawable/ic_next_page" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_vibrate"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#FFEB3B"
+                        android:src="@drawable/ic_vibrate" />
+
+                    <LinearLayout
+                        android:layout_width="231dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_vibrate_title" />
+
+                        <TextView
+                            style="@style/rowdetails"
+                            android:text="@string/preference_vibrate_summary" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/cb_vibrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout_camera_overlay"
+                    style="@style/Ripple"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/imageStyle"
+                        android:tint="#FF9800"
+                        android:src="@drawable/ic_camera" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/rowSwitchStyle"
+                            android:text="@string/preference_camera_overlay_title" />
+
+                        <TextView
+                            style="@style/rowdetails"
+                            android:text="@string/preference_camera_overlay_summary" />
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/cb_camera_overlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/checkbox_size"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:padding="@dimen/checkbox_padding" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

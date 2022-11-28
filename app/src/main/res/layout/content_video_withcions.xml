@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/selectableFrame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/_5sdp"
+    app:cardElevation="@dimen/_4sdp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_170sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/videoCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="@dimen/height_item" />
+
+                <ImageView
+                    android:id="@+id/play_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_circle_outline_grey_400_48dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detail_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.30"
+            android:background="#F1F0F0"
+            android:padding="2dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fileName"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:gravity="start"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:text="TEST\n mm"
+                android:visibility="gone"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10sdp" />
+
+            <ImageButton
+                android:id="@+id/ic_overflow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:background="@drawable/ic_overflow_shadow"
+                android:gravity="end"
+                android:visibility="gone"
+                android:src="@drawable/ic_more_vert_black_48dp" />
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/share_video"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:src="@drawable/share"
+                    app:tint="@color/colorAccent"
+                    android:layout_weight="1"/>
+
+
+                <ImageView
+                    android:id="@+id/rename_video"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:src="@drawable/rename"
+                    android:layout_gravity="center|center_horizontal"
+                    app:tint="@color/colorAccent"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/delete_video"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:src="@drawable/remove"
+                    app:tint="@color/colorAccent"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

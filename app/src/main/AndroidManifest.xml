@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xyz.screen.recorder">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.CAPTURE_VIDEO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.DUMP"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name=".CoderlyticsRecorderApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ad_border"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ad_border"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".TestingAcRecod"
+            android:exported="false" />
+        <activity
+            android:name=".RecordingTextActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecodingTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoderlyticsActivities.StartActivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoderlyticsActivities.CaptureScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoderlyticsActivities.RecCompletedDialogActivity"
+            android:exported="false"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:theme="@style/DialogActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_appid" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.screen.recorder.xyzscreenrecorder.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".CoderlyticsActivities.MainActivity"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CoderlyticsActivities.PermissionTakingCameraActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme_Transparent" />
+
+        <service
+            android:name=".CoderlyticsServices.RecorderService"
+            android:enabled="true"
+            android:exported="false"
+            android:stopWithTask="true"
+            android:foregroundServiceType="mediaProjection"
+            tools:targetApi="q"
+            android:permission="TODO" />
+        <service
+            android:name=".CoderlyticsServices.BubbleControlService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".CoderlyticsServices.SwimControlBrushService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".CoderlyticsServices.BubbleControlCaptureService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".CoderlyticsServices.SwimControlCameraService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".CoderlyticsServices.ScRecBrushService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".CoderlyticsServices.ScreenBlurService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".CoderlyticsServices.ToolsService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".CoderlyticsServices.SwimCameraViewService"
+            android:configChanges="orientation"
+            android:exported="false" />
+
+        <activity
+            android:name=".CoderlyticsActivities.StartRecorderActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme_Transparent" />
+        <activity
+            android:name=".CoderlyticsActivities.TakeScreenShotActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme_Transparent" />
+        <activity
+            android:name=".CoderlyticsActivities.TakeRequestRecorderActivity"
+            android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme_Transparent" />
+        <activity
+            android:name=".CoderlyticsActivities.SplashScreenActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CoderlyticsActivities.PrivacyPolicyActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CoderlyticsActivities.PermissionHintActivity"
+            android:exported="false"
+            android:theme="@style/GuideActivity" />
+        <activity
+            android:name=".TrimmingVideos.TrimmerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+    </application>
+
+</manifest>

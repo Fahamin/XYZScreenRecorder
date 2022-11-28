@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED7833</color>
+    <color name="colorPrimaryDark">#D64C24</color>
+    <color name="colorAccent">#D64C24</color>
+
+
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_offwhite">#949393</color>
+    <color name="background_progress_color">#6c6d6d</color>
+    <color name="background_video_color">#2f3031</color>
+    <color name="globalBlack">#020202</color>
+    <color name="black_alpha_70">#b3000000</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="black">#de000000</color>
+    <color name="white">#ffffff</color>
+    <color name="globalWhite">#ffffff</color>
+    <color name="grey_800">#424242</color>
+    <color name="line_button">#565758</color>
+    <color name="line_color">#ff15ff00</color>
+    <color name="multiSelectColor">#503b3b3b</color>
+    <color name="progress_color">@color/colorPrimary</color>
+    <color name="shadow_color">#ff000000</color>
+    <color name="text_color">#FF4081</color>
+
+</resources>

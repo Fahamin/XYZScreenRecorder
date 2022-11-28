@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="@string/app_name"
+        app:titleMarginStart="30dp"
+        app:logo="@drawable/icon64"
+        app:titleTextColor="@color/white"
+        android:textAlignment="center"/>
+
+
+    <FrameLayout
+        android:id="@+id/videoViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/bottom_container">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            tools:foreground="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/playIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/icon_video_play"/>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:fabSize="auto"
+        android:layout_above="@+id/bottom_container"
+        android:layout_alignParentRight="true"
+        app:srcCompat="@android:drawable/ic_menu_crop"
+        android:tint="@color/white"
+        tools:ignore="RtlCompat" />
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/backgroundView"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            />
+
+
+        <FrameLayout
+            android:id="@+id/trimmingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true">
+
+            <com.lb.video_trimmer_library.view.TimeLineView
+                android:id="@+id/timeLineView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.lb.video_trimmer_library.view.RangeSeekBarView
+                android:id="@+id/rangeSeekBarView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/background_video_color"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/timeTextContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_above="@id/trimmingContainer"
+            tools:visibility="visible"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/videoFileSizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                tools:ignore="RtlCompat"
+                tools:text="33 MB" />
+
+            <TextView
+                android:id="@+id/trimTimeRangeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                tools:ignore="RtlCompat"
+                tools:text="0:00 .. 1:00" />
+
+            <TextView
+                android:id="@+id/playbackTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                tools:ignore="RtlCompat"
+                tools:text="0:30" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

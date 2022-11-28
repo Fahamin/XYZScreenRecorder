@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="checkbox_padding">10dp</dimen>
+    <dimen name="checkbox_size">32dp</dimen>
+    <dimen name="frames_video_height">40dp</dimen>
+    <dimen name="height_item">170dp</dimen>
+    <dimen name="item_ic_padding">14dp</dimen>
+    <dimen name="navDrawer_header_height">170dp</dimen>
+    <dimen name="progress_video_line_height">2dp</dimen>
+    <dimen name="row_height">64dp</dimen>
+    <dimen name="screen_padding_10">10dp</dimen>
+    <dimen name="screen_padding_2">2dp</dimen>
+    <dimen name="screen_padding_5">5dp</dimen>
+    <dimen name="size_bubble_icon">48dp</dimen>
+    <dimen name="size_detail_spash">10sp</dimen>
+    <dimen name="size_title_spash">22sp</dimen>
+    <dimen name="text_details">12.5sp</dimen>
+    <dimen name="text_sum_size">15sp</dimen>
+
+</resources>

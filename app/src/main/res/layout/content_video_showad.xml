@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_200sdp"
+    android:gravity="center"
+    android:background="#000">
+    <TextView
+        android:id="@+id/sectionID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:text="Show Ad"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+</RelativeLayout>
+</LinearLayout>
